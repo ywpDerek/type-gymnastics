@@ -5,3 +5,6 @@ type GetArrRest<T> = T extends []
   ? Rest
   : never;
 type GetRestValue = GetArrRest<[]>;
+
+type GetArrFirst<T> = T extends [infer First, ...unknown[]] ? First : never;
+type GetFirstValue = GetArrFirst<[]>;
